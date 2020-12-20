@@ -1,0 +1,8 @@
+{
+    "name": "@txstreet/txstreet-token-ids",
+    "version": "1.0.0",
+    "description": "Get token ids for TxStreet NFTs",
+    "license": "MIT",
+    "repository": "txstreet/txstreet-token-ids",
+    "main": "index.js"
+}
