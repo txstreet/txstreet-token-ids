@@ -12,4 +12,13 @@ module.exports = {
     }
     return tokenName;
   },
+  getSupply: (tokenName) => {
+    let supply = 0;
+    if (tokenName == "santa") {
+      supply = 100;
+    } else if (tokenName == "snowman") {
+      supply = 100;
+    }
+    return supply;
+  },
 };
