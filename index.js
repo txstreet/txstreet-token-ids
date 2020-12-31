@@ -15,9 +15,9 @@ module.exports = {
   getSupply: (tokenName) => {
     let supply = 0;
     if (tokenName == "santa") {
-      supply = 100;
+      supply = 102;
     } else if (tokenName == "snowman") {
-      supply = 100;
+      supply = 102;
     }
     return supply;
   },
