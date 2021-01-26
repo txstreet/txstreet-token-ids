@@ -1,24 +1,41 @@
+const tokenInfo = {
+  santa: {
+    supply: 101,
+    start: 13000000,
+    limited: true,
+  },
+  snowman: {
+    supply: 101,
+    start: 12000000,
+    limited: true,
+  },
+  helper: {
+    supply: 0,
+    start: 11000000,
+  },
+  sleeve: {
+    supply: 1,
+    start: 1,
+  },
+};
+
 module.exports = {
+  tokenInfo: tokenInfo,
   getName: (tokenId) => {
-    let tokenName;
-    if (tokenId == 1) {
-      tokenName = "sleeve";
-    } else if (tokenId >= 11000000 && tokenId < 12000000) {
-      tokenName = "helper";
-    } else if (tokenId >= 12000000 && tokenId < 13000000) {
-      tokenName = "snowman";
-    } else if (tokenId >= 13000000 && tokenId < 14000000) {
-      tokenName = "santa";
+    for (const tokenName in tokenInfo) {
+      const info = tokenInfo[tokenName];
+      if (
+        tokenId >= info.start &&
+        tokenId < info.start + info.supply
+      ) {
+        return tokenName;
+      }
     }
-    return tokenName;
+    return "";
   },
   getSupply: (tokenName) => {
-    let supply = 0;
-    if (tokenName == "santa") {
-      supply = 101;
-    } else if (tokenName == "snowman") {
-      supply = 101;
-    }
-    return supply;
+    const info = tokenInfo[tokenName];
+    if(!info || !info.supply) return 0;
+    return info.supply;
   },
 };
