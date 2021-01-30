@@ -3,11 +3,15 @@ const tokenInfo = {
     supply: 101,
     start: 13000000,
     limited: true,
+    owner: "0xb3330e9057b4d9bd27875b46f0897b2a8f63da1a",
+    priceInETH: 0.035,
   },
   snowman: {
     supply: 101,
     start: 12000000,
     limited: true,
+    owner: "0xb3330e9057b4d9bd27875b46f0897b2a8f63da1a",
+    priceInETH: 0.035,
   },
   helper: {
     supply: 0,
@@ -16,6 +20,8 @@ const tokenInfo = {
   sleeve: {
     supply: 1,
     start: 1,
+    owner: "0xb3330e9057b4d9bd27875b46f0897b2a8f63da1a",
+    priceInETH: 0.0001,
   },
 };
 
