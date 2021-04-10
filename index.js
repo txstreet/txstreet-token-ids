@@ -1,7 +1,7 @@
 const tokenInfo = {
   moonboy: {
     name: "Moon Boy",
-    description: "To the moon!",
+    description: "To The Moon!",
     set: 2,
     external_url: "https://txstreet.com/v/eth",
     supply: 10,
