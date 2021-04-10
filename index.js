@@ -377,7 +377,7 @@ module.exports = {
   },
   getSupply: (tokenName) => {
     const info = tokenInfo[tokenName];
-    if (!info || !info.supply || !info.idTotal) return 0;
+    if (!info) return 0;
     if(info.idTotal) return info.idTotal;
     return info.supply;
   },
