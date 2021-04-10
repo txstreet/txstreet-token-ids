@@ -1,4 +1,98 @@
 const tokenInfo = {
+  moonboy: {
+    name: "Moon Boy",
+    description: "To the moon!",
+    set: 2,
+    external_url: "https://txstreet.com/v/eth",
+    supply: 10,
+    start: 14000000,
+    created: null,
+    limited: true,
+    owner: "0xb3330e9057b4d9bd27875b46f0897b2a8f63da1a",
+    priceInETH: 0.420,
+    attributes: [
+      {
+        display_type: "boost_percentage",
+        trait_type: "Speed",
+        value: 80,
+      },
+      {
+        display_type: "boost_percentage",
+        trait_type: "Chatiness",
+        value: 90,
+      },
+      {
+        trait_type: "Set",
+        value: "Space 2021",
+      },
+    ],
+  },
+  alien: {
+    name: "Alien",
+    description: "A Big Brain E.T.",
+    set: 2,
+    external_url: "https://txstreet.com/v/eth",
+    supply: 15,
+    start: 15000000,
+    created: null,
+    limited: true,
+    owner: "0xb3330e9057b4d9bd27875b46f0897b2a8f63da1a",
+    priceInETH: 0.4,
+    attributes: [
+      {
+        display_type: "boost_percentage",
+        trait_type: "Speed",
+        value: 90,
+      },
+      {
+        display_type: "boost_percentage",
+        trait_type: "Chatiness",
+        value: 40,
+      },
+      {
+        display_type: "boost_percentage",
+        trait_type: "Magic",
+        value: 40,
+      },
+      {
+        trait_type: "Set",
+        value: "Space 2021",
+      },
+    ],
+  },
+  mib: {
+    name: "Man In Black",
+    description: "A Flashy Secret Agent",
+    set: 2,
+    external_url: "https://txstreet.com/v/eth",
+    supply: 20,
+    start: 16000000,
+    created: null,
+    limited: true,
+    owner: "0xb3330e9057b4d9bd27875b46f0897b2a8f63da1a",
+    priceInETH: 0.25,
+    attributes: [
+      {
+        display_type: "boost_percentage",
+        trait_type: "Speed",
+        value: 30,
+      },
+      {
+        display_type: "boost_percentage",
+        trait_type: "Chatiness",
+        value: 60,
+      },
+      {
+        display_type: "boost_percentage",
+        trait_type: "Magic",
+        value: 50,
+      },
+      {
+        trait_type: "Set",
+        value: "Space 2021",
+      },
+    ],
+  },
   santa: {
     name: "Santa",
     description: "The gift bringer.",
