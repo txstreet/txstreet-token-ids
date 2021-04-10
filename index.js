@@ -368,6 +368,7 @@ module.exports = {
   getName: (tokenId) => {
     for (const tokenName in tokenInfo) {
       const info = tokenInfo[tokenName];
+      if(info.ids && info.ids.includes(tokenId)) return tokenName;
       if (tokenId >= info.start && tokenId < info.start + info.supply) {
         return tokenName;
       }
@@ -376,7 +377,8 @@ module.exports = {
   },
   getSupply: (tokenName) => {
     const info = tokenInfo[tokenName];
-    if (!info || !info.supply) return 0;
+    if (!info || !info.supply || !info.idTotal) return 0;
+    if(info.idTotal) return info.idTotal;
     return info.supply;
   },
 };
