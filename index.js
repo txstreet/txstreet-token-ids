@@ -18,7 +18,7 @@ const tokenInfo = {
       },
       {
         display_type: "boost_percentage",
-        trait_type: "Chatiness",
+        trait_type: "Chattiness",
         value: 90,
       },
       {
@@ -46,7 +46,7 @@ const tokenInfo = {
       },
       {
         display_type: "boost_percentage",
-        trait_type: "Chatiness",
+        trait_type: "Chattiness",
         value: 40,
       },
       {
@@ -79,7 +79,7 @@ const tokenInfo = {
       },
       {
         display_type: "boost_percentage",
-        trait_type: "Chatiness",
+        trait_type: "Chattiness",
         value: 60,
       },
       {
@@ -112,7 +112,7 @@ const tokenInfo = {
       },
       {
         display_type: "boost_percentage",
-        trait_type: "Chatiness",
+        trait_type: "Chattiness",
         value: 20,
       },
       {
@@ -145,7 +145,7 @@ const tokenInfo = {
       },
       {
         display_type: "boost_percentage",
-        trait_type: "Chatiness",
+        trait_type: "Chattiness",
         value: 30,
       },
       {
@@ -340,7 +340,7 @@ const tokenInfo = {
       },
       {
         display_type: "boost_percentage",
-        trait_type: "Chatiness",
+        trait_type: "Chattiness",
         value: 10,
       },
       {
