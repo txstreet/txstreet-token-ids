@@ -1,3 +1,4 @@
+const NON_FUNGIBLE_START = 10000000;
 const tokenInfo = {
   moonboy: {
     name: "Moon Boy",
@@ -9,7 +10,7 @@ const tokenInfo = {
     created: null,
     limited: true,
     owner: "0xb3330e9057b4d9bd27875b46f0897b2a8f63da1a",
-    priceInETH: 0.420,
+    priceInETH: 0.42,
     attributes: [
       {
         display_type: "boost_percentage",
@@ -362,13 +363,23 @@ const tokenInfo = {
     priceInETH: 0.0001,
   },
 };
-
+const getIds = (tokenName) => {
+  const token = tokenInfo[tokenName];
+  if (token.start < NON_FUNGIBLE_START) return [];
+  if (token.ids) return token.ids;
+  let ids = [];
+  for (let i = token.start; i < token.start + token.supply; i++) {
+    ids.push(i);
+  }
+  return ids;
+};
 module.exports = {
   tokenInfo: tokenInfo,
+  NON_FUNGIBLE_START: NON_FUNGIBLE_START,
   getName: (tokenId) => {
     for (const tokenName in tokenInfo) {
       const info = tokenInfo[tokenName];
-      if(info.ids && info.ids.includes(tokenId)) return tokenName;
+      if (info.ids && info.ids.includes(tokenId)) return tokenName;
       if (tokenId >= info.start && tokenId < info.start + info.supply) {
         return tokenName;
       }
@@ -378,7 +389,16 @@ module.exports = {
   getSupply: (tokenName) => {
     const info = tokenInfo[tokenName];
     if (!info) return 0;
-    if(info.idTotal) return info.idTotal;
+    if (info.idTotal) return info.idTotal;
     return info.supply;
+  },
+  //get ids for non fungible tokens only
+  getIds: getIds,
+  getAllIds: () => {
+    let ids = [];
+    for (const name in tokenInfo) {
+      ids = ids.concat(getIds(name));
+    }
+    return ids;
   },
 };
