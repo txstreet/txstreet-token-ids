@@ -71,7 +71,7 @@ const tokenInfo = {
     created: null,
     limited: true,
     owner: "0xb3330e9057b4d9bd27875b46f0897b2a8f63da1a",
-    priceInETH: 0.25,
+    priceInETH: 0.35,
     attributes: [
       {
         display_type: "boost_percentage",
